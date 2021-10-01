@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-items: center;
+}
+h4 {
+  color: rgb(42, 42, 192);
+  font-size: 25px;
+}
+h1 {
+  color: rgb(48, 169, 78);
+}
+body {
+  margin-left: 10em;
+}
+img {
+  width: 80px;
+  object-fit: cover;
+}

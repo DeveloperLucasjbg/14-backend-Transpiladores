@@ -1,0 +1,27 @@
+{{#if datos}}
+  {{#each datos}}
+    <ul>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4>price :{{this.tittle}}</h4>
+          </div>
+          <div class="col">
+            <h4>price :{{this.price}}</h4>
+          </div>
+          <div class="col">
+            <img
+              src={{this.thumbail}}
+              class="img-fluid"
+              style="max-width: 1.5em;"
+            />
+          </div>
+        </div>
+      </div>
+    </ul>
+  {{else}}
+    <ul>
+      <h4>No hay productos</h4>
+    </ul>
+  {{/each}}
+{{/if}}
