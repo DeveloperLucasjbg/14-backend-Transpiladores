@@ -1,4 +1,4 @@
-export class metodos {
+export default class metodos {
   constructor(id, req, productos) {
     this.idToSearch = id;
     this.productos = productos;
@@ -47,3 +47,4 @@ export class metodos {
     return aux;
   }
 }
+

@@ -41,23 +41,23 @@ let productos = [
   },
 ];
 
-router.get("/productos/listar", (_:JSON, res:JSON) => {
+router.get("/productos/listar", (_, res) => {
   res.json(new metodos(null, null, productos).listar());
 });
 
-router.get("/productos/listar/:id", (req:string, res:JSON) => {
+router.get("/productos/listar/:id", (req, res) => {
   const { id } = req.params;
   res.json(new metodos(id, null, productos).listarPorId());
 });
-router.post("/productos/guardar", (req:JSON, res:JSON) => {
+router.post("/productos/guardar", (req, res) => {
   res.json(new metodos(null, req.body, productos).guardar());
 });
 
-router.put("/productos/actualizar/:id", (req:string, res:JSON) => {
+router.put("/productos/actualizar/:id", (req, res) => {
   const { id } = req.params;
   res.json(new metodos(id, req.body, productos).actualizar());
 });
-router.delete("/productos/borrar/:id", (req:JSON, res:JSON) => {
+router.delete("/productos/borrar/:id", (req, res) => {
   const { id } = req.params;
   res.json((productos = new metodos(id, req.body, productos).borrar()));
 });
@@ -77,7 +77,7 @@ app.engine(
 app.set("main", "/views");
 app.set("view engine", "hbs");
 
-router.get("/productos/vista", (_:JSON, res:JSON) => {
+router.get("/productos/vista", (_, res) => {
   res.render("main", {
     datos: new metodos(null, null, productos).listar(),
   });
